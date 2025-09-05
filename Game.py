@@ -96,6 +96,7 @@ while True:
     # Event handling
     # TODO Task 4: Add your name
     name = "Stephanie"
+    # HEllo
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
