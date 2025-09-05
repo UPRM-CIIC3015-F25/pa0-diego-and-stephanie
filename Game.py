@@ -12,7 +12,7 @@ def ball_movement():
 
     # Start the ball movement when the game begins
     # TODO Task 5 Create a Merge Conflict
-    speed = 7
+    speed = 10
     if start:
         ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
         ball_speed_y = speed * random.choice((1, -1))  # Randomize initial vertical direction
@@ -29,6 +29,7 @@ def ball_movement():
     # Ball collision with top boundary
     if ball.top <= 0:
         ball_speed_y *= -1  # Reverse ball's vertical direction
+
     # Ball collision with left and right boundaries
     if ball.left <= 0 or ball.right >= screen_width:
         ball_speed_x *= -1
@@ -51,7 +52,7 @@ def player_movement():
 
 def restart():
     """
-    Resets the ball and player scores to the initial s
+    Resets the ball and player scores to the initial state.
     """
     global ball_speed_x, ball_speed_y, score
     ball.center = (screen_width / 2, screen_height / 2)  # Reset ball position to center
@@ -94,7 +95,8 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "Diego"
+    name = "Stephanie"
+    # HEllo
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
@@ -122,7 +124,7 @@ while True:
     screen.fill(bg_color)  # Clear screen with background color
     pygame.draw.rect(screen, light_grey, player)  # Draw player paddle
     # TODO Task 3: Change the Ball Color
-    pygame.draw.ellipse(screen, light_grey, ball)  # Draw ball
+    pygame.draw.ellipse(screen, red , ball)  # Draw ball
     player_text = basic_font.render(f'{score}', False, light_grey)  # Render player score
     screen.blit(player_text, (screen_width/2 - 15, 10))  # Display score on screen
 
