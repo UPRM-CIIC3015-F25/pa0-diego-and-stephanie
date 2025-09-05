@@ -29,7 +29,6 @@ def ball_movement():
     # Ball collision with top boundary
     if ball.top <= 0:
         ball_speed_y *= -1  # Reverse ball's vertical direction
-
     # Ball collision with left and right boundaries
     if ball.left <= 0 or ball.right >= screen_width:
         ball_speed_x *= -1
