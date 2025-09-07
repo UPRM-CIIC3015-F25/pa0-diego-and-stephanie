@@ -26,7 +26,7 @@ def ball_movement():
             ball_speed_y *= -1  # Reverse ball's vertical direction
             # TODO Task 6: Add sound effects HERE
             sound_1 = pygame.mixer.Sound('sound.wav')
-            sound_1.play()
+            sound_1.play() # test
 
     # Ball collision with top boundary
     if ball.top <= 0:
