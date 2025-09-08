@@ -64,6 +64,10 @@ def restart():
 # General setup
 pygame.mixer.pre_init(44100, -16, 1, 1024)
 pygame.init()
+# Load and play background music
+pygame.mixer.music.load('music.wav')
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
 clock = pygame.time.Clock()
 
 # Main Window setup
