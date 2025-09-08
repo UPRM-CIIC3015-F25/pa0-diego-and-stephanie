@@ -23,10 +23,13 @@ def ball_movement():
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Fix score to increase by 1
             score = score + 1  # Increase player score
-            ball_speed_y *= -1  # Reverse ball's vertical direction
+            ball_speed_y *= -1 # Reverse ball's vertical direction
+
+            ball_speed_x *= 1.1
+            ball_speed_y *= 1.1
             # TODO Task 6: Add sound effects HERE
             sound_1 = pygame.mixer.Sound('sound.wav')
-            sound_1.play() #
+            sound_1.play()
 
     # Ball collision with top boundary
     if ball.top <= 0:
